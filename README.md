@@ -112,4 +112,41 @@ CloudFront is a fast CDN (content delivery network) service offered by Amazon aw
 
 CloudFront transfer content globally with low latency thanks to the wide aws infrastructure. All the points of the network (globally distributed) are called `Edge Locations`.
 
-More information about CloudFront can be found [here](https://aws.amazon.com/cloudfront/?nc2=type_a). 
+More information about CloudFront can be found [here](https://aws.amazon.com/cloudfront/?nc2=type_a).
+
+### Create the Distribution
+Open the CloudFront console by clicking on `Services` on the top navigation bar and typing `CloudFront`.
+
+![alt CloudFront service](/images/cloudFront/cloud-front-service.png)
+
+From the console click on the `Create Distribution` button.
+
+![alt CloudFront console](/images/cloudFront/cloudFront-home.png)
+
+This button will open the Distribution configurations page. For our purposes we need a `Web` distribution, therefore click on `Get Started` under the Web section.
+
+![alt new distribution](/images/cloudFront/new-distribution-home.png)
+
+In the new page we need to configure our Distribution. In particular we need to tell CloudFront where to take the resources and what's the origin path.
+
+Click on `Origin Domain Name` and you'll see the available origins. Select the `Amazon S3 Bucket` previously created.
+
+![alt select bucket](/images/cloudFront/select-bucket.png)
+
+Click on `Origin Path` and add the origin to your resources in the S3 bucket. If your index.html file is located in the root of the bucket, just type `/` in the Origin Path.
+
+![alt origin path](/images/cloudFront/origin-path.png)
+
+
+You can change the `Default Cache Behavior Settings` to accommodate your needs. For instance is good to redirect `http` requests to `https`.
+
+Scroll down and under `Distribution Settings` select where you want your content to be distributed.
+
+Click on 'Create Distribution' to create the CloudFront distribution. This operation takes some time to complete, normally around 10 minutes.
+
+![alt distribution settings](/images/cloudFront/distribution-settings.png)
+
+At the end of the deployment, in the CloudFront console you'll see that the `Status` of the distribution changes to `Deployed`.
+You can now access your website over the internet by accessing the `Domain Name` from the browser.
+
+ ![alt deployed distribution](/images/cloudFront/deployed-distribution.png)
