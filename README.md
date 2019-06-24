@@ -106,3 +106,10 @@ Now you'll see that the `Static website hosting` section, is enabled.
 ![alt static website hosting enabled](/images/s3/bucket-hosting.png)
 
 At this point we're done with the bucket and we can proceed to CloudFlare to leverage the caching and distribution of our website.
+
+## CDN with CloudFront
+CloudFront is a fast CDN (content delivery network) service offered by Amazon aws.
+
+CloudFront transfer content globally with low latency thanks to the wide aws infrastructure. All the points of the network (globally distributed) are called `Edge Locations`.
+
+More information about CloudFront can be found [here](https://aws.amazon.com/cloudfront/?nc2=type_a). 
