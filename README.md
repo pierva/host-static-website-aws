@@ -149,4 +149,27 @@ Click on 'Create Distribution' to create the CloudFront distribution. This opera
 At the end of the deployment, in the CloudFront console you'll see that the `Status` of the distribution changes to `Deployed`.
 You can now access your website over the internet by accessing the `Domain Name` from the browser.
 
- ![alt deployed distribution](/images/cloudFront/deployed-distribution.png)
+![alt deployed distribution](/images/cloudFront/deployed-distribution.png)
+
+
+## Expire cached content
+The default caching time, before the edge locations make a request to the source to check whether the content has been updated is 24 hrs (Default TTL 86400s).
+
+If you update the content in the S3 bucket keeping the same file name and without versioning, you won't see the new content until the TTL time is elapsed, which in the worst case, as mentioned above is 24hrs.
+
+To expire the content in the edge locations you can create an invalidation.
+
+From the CloudFront console, check your distribution and click on `Distribution Settings`. Alternatively you can click on the distribution ID.
+
+
+![alt cloud front console](/images/invalidations/cloud-front-console.png)
+
+In the `Distribution Settings` page, click on the `Invalidations` tab and then on the `Create Invalidation` button.
+
+![alt create invalidation tab](/images/invalidations/create-invalidation.png)
+
+In the `Create Invalidation` modal, specify the path to the files you want to expire. Click on `Invalidate`.
+
+The status of the invalidation will be `In progress`. Once the invalidation is completed, and all the edge locations updated, you'll see the status changing to `Completed`.
+
+![alt invalidation status](/images/invalidations/invalidation-in-progress.png)
