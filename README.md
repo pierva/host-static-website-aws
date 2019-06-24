@@ -1,9 +1,21 @@
 # Host a static website with aws
+## Cloud Developer Nanodegree - Udacity -
 
 This guide shows how you can simply host a website using an AWS s3 bucket and leveraging caching with CloudFront.
 
 Before you get started you need to have a valid aws account. After creating the account [login into the console.](https://console.aws.amazon.com/console/home)
 
+
+## Table of Contents
+
++ [The S3 bucket](#the-s3-bucket)
+  * [Get started with S3](#lets-get-started-with-s3)
+  * [Upload files to the bucket](#upload-files-to-the-bucket)
+  * [Change bucket policy](#change-bucket-policy)
+  * [Change bucket properties](#change-bucket-properties)
++ [CDN with CloudFront](#cdn-with-cloudfront)
+  * [Create the distribution](#create-the-distribution)
++ [Expire cached content](#expire-cached-content)
 ___
 
 ## The S3 bucket
