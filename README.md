@@ -45,7 +45,7 @@ Click `Next` again to access the 'Review' tab. If everything looks fine here, cl
 ![alt create bucket](/images/s3/create-bucket.png)
 
 ### Upload files to the bucket
-Now that the bucket has been created, we can actually upload our website content in it.
+Now that the bucket has been created, we can upload our website content in it.
 Click on the bucket name to open the bucket console.
 
 ![alt click on bucket name](/images/s3/click-on-bucket.png)
@@ -57,7 +57,7 @@ In the opened `Upload` popup drag and drop your content in it or click on the `A
 
 ![alt upload page](/images/s3/upload-page.png)
 
-At this point the files have not been uploaded yet to the console. But you can see the uploaded content listed on the popup. Click the `Upload` button to transfer the files to the bucket.
+At this point the files have not been transferred yet to the bucket. You can see the uploaded content listed on the popup. Click the `Upload` button to transfer the files to the bucket.
 
 ![alt files ready](/images/s3/files-ready.png)
 
