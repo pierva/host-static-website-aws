@@ -86,3 +86,23 @@ If you go back in the `S3 buckets` console by clicking the `Amazon S3` link on t
 ![alt bucket public](/images/s3/access-public.png)
 
 You can test that the resources are publicly available by entering the bucket (click on the bucket name), then in the `Overview` tab, click on one of the files (for instance on `index.html`), then in the new page, under the `Overview` tab, you'll find the URL under `Objcet URL`. Click on the link and you should see your file.
+
+
+### Change Bucket Properties
+With the new policy, previously set, we can change the bucket's `Properties` in order to serve the Static Website.
+
+Open the bucket's console by clicking on the bucket's name, click on the `Properties` tab and then click on `Static website hosting`. After clicking on the block, you'll be prompted to enter some configurations.
+
+In this section you need to provide the `Index document` name (normally index.html) and the `Error document`, if any. If you don't have a dedicated error page, enter the same entry point entered in `Index document`.
+
+Click on `Save`.
+
+![alt static website hosting](/images/s3/hosting-configuration.png)
+
+
+
+Now you'll see that the `Static website hosting` section, is enabled.
+
+![alt static website hosting enabled](/images/s3/bucket-hosting.png)
+
+At this point we're done with the bucket and we can proceed to CloudFlare to leverage the caching and distribution of our website.
