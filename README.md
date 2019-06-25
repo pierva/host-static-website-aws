@@ -91,6 +91,8 @@ In the editor enter the below json and change the bucket name with your bucket's
 ```
 ![alt change policy json](/images/s3/change-policy-json.png)
 
+You can also use the [aws policy generator](https://awspolicygen.s3.amazonaws.com/policygen.html) to create the json needed for the policy. 
+
 After saving the policy, you'll see that a yellow `Public` tag will be added under `Permissions` and `Bucket Policy`.
 
 If you go back in the `S3 buckets` console by clicking the `Amazon S3` link on the top left, you'll see that the bucket `Access` is changed to `Public`.
